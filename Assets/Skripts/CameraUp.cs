@@ -26,10 +26,12 @@ public class CameraUp : MonoBehaviour
     {
         target = look;
         cam.enabled = true;
+        InputPK.rid.enabled = false;
     }
     public void AndDemo() 
     {
         cam.enabled = false;
+        InputPK.rid.enabled = true;
     }
     private void Update()
     {

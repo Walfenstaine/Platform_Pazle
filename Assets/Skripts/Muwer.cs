@@ -9,12 +9,13 @@ public class Muwer : MonoBehaviour {
 	public float minimumY = -60F;
 	public float maximumY = 60F;
 	public float speed = 6.0F;
+	public float jumpforse = 10;
 	public float gravity = 20.0F;
 	public Animator anim;
 	private Vector3 moveDirection = Vector3.zero;
 	float rotationY = 0F;
 	private CharacterController controller;
-
+	public bool grunded;
     public static Muwer rid { get; set; }
     void Awake()
     {
@@ -35,7 +36,28 @@ public class Muwer : MonoBehaviour {
 		controller = GetComponent<CharacterController>();
 	}
 
-	void Update() {
+    private void OnTriggerEnter(Collider other)
+    {
+		if (other.tag != "Player") 
+		{
+            grunded = true;
+        }
+		
+    }
+    private void OnTriggerExit(Collider other)
+    {
+		if (other.tag != "Player")
+		{
+			grunded = false;
+            anim.SetTrigger("Jump");
+        }
+    }
+	public void Jump() 
+	{
+        muve.y = jumpforse;
+	}
+
+    void Update() {
 		if (cam != null) {
 			float rotationX = transform.localEulerAngles.y + rut.x * sensitivity;
             rotationY += rut.y * sensitivity;
@@ -45,14 +67,17 @@ public class Muwer : MonoBehaviour {
 			transform.localEulerAngles = new Vector3(0, rotationX, 0);
 		}
 
-		if (controller.isGrounded) {
-			
+		if (grunded) {
 			moveDirection = muve;
 			moveDirection = transform.TransformDirection (moveDirection);
 			moveDirection *= speed;
 
 		} else {
 			moveDirection.y -= gravity * Time.deltaTime;
+			if (controller.velocity.y <= 0) 
+			{
+                muve.y = 0;
+            }
 		}
 
 		controller.Move(moveDirection * Time.deltaTime);
