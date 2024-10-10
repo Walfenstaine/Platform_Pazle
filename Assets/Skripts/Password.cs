@@ -33,7 +33,10 @@ public class Password : MonoBehaviour
     public void Button(int code)
 
     {
-        str += code;
+        if(str.Length < 4)
+        {
+            str += code;
+        }
     }
 
     public void Delete()
