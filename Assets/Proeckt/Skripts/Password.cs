@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Password : MonoBehaviour
 {
-    public int i;
+    public string name;
     public string str;
     public Text txt;
     public AudioSource sors;
@@ -14,7 +14,7 @@ public class Password : MonoBehaviour
     void Start()
 
     {
-        i = Random.Range(1000 , 9999);
+        name = "7054";
     }
 
     void Update()
@@ -48,7 +48,7 @@ public class Password : MonoBehaviour
     public void Check()
 
     {
-        if(int.Parse(str) == i)
+        if(str == name)
         {
             sors.PlayOneShot(clip);
         }
