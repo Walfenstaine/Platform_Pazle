@@ -6,7 +6,7 @@ public class GrandPanel : MonoBehaviour
 {
     public List<int> keys;
     public static GrandPanel rid { get; set; }
-    void Awake()
+void Awake()
     {
         if (rid == null)
         {
@@ -21,9 +21,30 @@ public class GrandPanel : MonoBehaviour
     {
         rid = null;
     }
-
     public void Ensept(int set) 
     {
         keys.Add(set);
+    }
+    public void Extsept(int set)
+    {
+        if (keys.Count > 0) 
+        {
+            if (keys[0] == set)
+            {
+                if (keys.Count > 1)
+                {
+                    keys.RemoveAt(0);
+                    CameraUp.rid.AndDemo();
+                }
+                else 
+                {
+                    Interface.rid.Sum(2);
+                }
+            }
+            else 
+            {
+                Interface.rid.Sum(3);
+            }
+        }
     }
 }

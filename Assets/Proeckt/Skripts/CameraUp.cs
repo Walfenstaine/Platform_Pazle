@@ -27,6 +27,8 @@ public class CameraUp : MonoBehaviour
         target = look;
         cam.enabled = true;
         InputPK.rid.enabled = false;
+        Muwer.rid.muve = Vector3.zero;
+        Muwer.rid.rut = Vector2.zero;
     }
     public void AndDemo() 
     {
