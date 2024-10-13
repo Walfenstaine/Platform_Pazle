@@ -9,7 +9,7 @@ public class Password : MonoBehaviour
     public string str;
     public Text txt;
     public AudioSource sors;
-    public AudioClip clip , sound;
+    public AudioClip clip , sound , radio;
 
     void Start()
 
@@ -42,10 +42,14 @@ public class Password : MonoBehaviour
     public void Delete()
 
     {
-        str = "";
+        if(str != "")
+        {
+            str = "";
+            sors.PlayOneShot(radio);    
+        }
     }
 
-    public void Check()
+    public void Check() 
 
     {
         if(str == name)
