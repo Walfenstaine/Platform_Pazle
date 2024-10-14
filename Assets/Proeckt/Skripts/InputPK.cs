@@ -24,7 +24,7 @@ public class InputPK : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            Interface.rid.Sum(0);
+            Interface.rid.Sum(0, true, 0);
         }
         if (Muwer.rid) 
         {

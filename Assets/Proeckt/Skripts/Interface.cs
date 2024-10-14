@@ -29,19 +29,11 @@ public class Interface : MonoBehaviour
     {
         sumer[0].Invoke();
     }
-    public void Sum(int index)
+    public void Sum(int index, bool cursor, float scale)
     {
         sumer[index].Invoke();
-        if (index == 1)
-        {
-            CursorEvent(false);
-            Time.timeScale = 1;
-        }
-        else 
-        {
-            CursorEvent(true);
-            Time.timeScale = 0;
-        }
+        CursorEvent(cursor);
+        Time.timeScale = scale;
     }
    
     void CursorEvent(bool activ)

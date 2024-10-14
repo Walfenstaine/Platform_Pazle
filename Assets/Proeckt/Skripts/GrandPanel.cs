@@ -38,12 +38,12 @@ void Awake()
                 }
                 else 
                 {
-                    Interface.rid.Sum(2);
+                    Interface.rid.Sum(2, true, 0);
                 }
             }
             else 
             {
-                Interface.rid.Sum(3);
+                Interface.rid.Sum(3, true, 0);
             }
         }
     }

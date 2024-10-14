@@ -8,7 +8,6 @@ public class Password : MonoBehaviour
     public string name;
     public string str;
     public Text txt;
-    public AudioSource sors;
     public AudioClip clip , sound , radio;
 
     void Start()
@@ -33,9 +32,13 @@ public class Password : MonoBehaviour
     public void Button(int code)
 
     {
-        if(str.Length < 4)
+        if (str.Length < 4)
         {
             str += code;
+        }
+        else 
+        {
+            str = "";
         }
     }
 
@@ -45,7 +48,7 @@ public class Password : MonoBehaviour
         if(str != "")
         {
             str = "";
-            sors.PlayOneShot(radio);    
+            SoundPlayer.regit.Play(radio,1);    
         }
     }
 
@@ -54,11 +57,11 @@ public class Password : MonoBehaviour
     {
         if(str == name)
         {
-            sors.PlayOneShot(clip);
+            SoundPlayer.regit.Play(clip,1);
         }
         else
         {
-            sors.PlayOneShot(sound);
+            SoundPlayer.regit.Play(sound,1);
         }
     }
 
