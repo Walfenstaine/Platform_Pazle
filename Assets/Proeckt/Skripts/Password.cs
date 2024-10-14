@@ -35,11 +35,7 @@ public class Password : MonoBehaviour
         if (str.Length < 4)
         {
             str += code;
-        }
-        else 
-        {
-            str = "";
-        }
+        }     
     }
 
     public void Delete()
@@ -48,7 +44,7 @@ public class Password : MonoBehaviour
         if(str != "")
         {
             str = "";
-            SoundPlayer.regit.Play(radio,1);    
+            SoundPlayer.regit.Play(radio , 1);    
         }
     }
 
@@ -57,11 +53,11 @@ public class Password : MonoBehaviour
     {
         if(str == name)
         {
-            SoundPlayer.regit.Play(clip,1);
+            SoundPlayer.regit.Play(clip , 1);
         }
         else
         {
-            SoundPlayer.regit.Play(sound,1);
+            SoundPlayer.regit.Play(sound , 1);
         }
     }
 
