@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class Password : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Password : MonoBehaviour
     public string str;
     public Text txt;
     public AudioClip clip , sound , radio;
+    public UnityEvent[] sumer;
 
     void Start()
 

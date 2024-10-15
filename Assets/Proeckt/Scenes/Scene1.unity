@@ -1637,6 +1637,22 @@ PrefabInstance:
       propertyPath: name
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8810779813707592020, guid: 379f77917bd4a7c458d75d122b6a5a72, type: 3}
+      propertyPath: sumer.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8810779813707592020, guid: 379f77917bd4a7c458d75d122b6a5a72, type: 3}
+      propertyPath: sumer.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8810779813707592020, guid: 379f77917bd4a7c458d75d122b6a5a72, type: 3}
+      propertyPath: sumer.Array.data[0].m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8810779813707592020, guid: 379f77917bd4a7c458d75d122b6a5a72, type: 3}
+      propertyPath: sumer.Array.data[1].m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
