@@ -38,18 +38,20 @@ public class Muwer : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-		if (other.tag != "Player") 
+		if (other.tag == "Grund") 
 		{
             grunded = true;
+			transform.parent = other.transform;
         }
 		
     }
     private void OnTriggerExit(Collider other)
     {
-		if (other.tag != "Player")
+		if (other.tag == "Grund")
 		{
 			grunded = false;
             anim.SetTrigger("Jump");
+			transform.parent = null;
         }
     }
 	public void Jump() 
