@@ -5,6 +5,7 @@ using UnityEngine;
 public class Platform : MonoBehaviour
 {
     public Vector3 nap;
+    public Vector3 muve;
     public float perriod, speed;
     public bool answer;
     private float time;
@@ -15,6 +16,7 @@ public class Platform : MonoBehaviour
     }
     void Update()
     {
+        
         if (Time.time >= time) 
         {
             answer = !answer;
@@ -22,11 +24,13 @@ public class Platform : MonoBehaviour
         }
         if (answer)
         {
-            transform.position += nap * speed * Time.deltaTime;
+            transform.position += nap * Time.deltaTime;
+            muve = Muwer.rid.transform.TransformDirection(nap * speed*3);
         }
         else 
         {
-            transform.position -= nap * speed * Time.deltaTime;
+            transform.position -= nap * Time.deltaTime;
+            muve = Muwer.rid.transform.TransformDirection(nap * -speed*3);
         }
     }
 }

@@ -259,6 +259,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Buton (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 880094844261462949, guid: bce0ac5639de4714cade5a2aa908b975, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4985304481448854490, guid: bce0ac5639de4714cade5a2aa908b975, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -490,6 +494,10 @@ PrefabInstance:
     - target: {fileID: 880094844261462949, guid: bce0ac5639de4714cade5a2aa908b975, type: 3}
       propertyPath: m_Name
       value: Buton (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 880094844261462949, guid: bce0ac5639de4714cade5a2aa908b975, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4985304481448854490, guid: bce0ac5639de4714cade5a2aa908b975, type: 3}
       propertyPath: m_RootOrder
@@ -1096,6 +1104,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Buton
       objectReference: {fileID: 0}
+    - target: {fileID: 880094844261462949, guid: bce0ac5639de4714cade5a2aa908b975, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4985304481448854490, guid: bce0ac5639de4714cade5a2aa908b975, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1313,7 +1325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5588071056741394010, guid: 3e2a4ea699ebf0245b225993cbcf0a68, type: 3}
       propertyPath: m_TagString
-      value: Grund
+      value: Platform
       objectReference: {fileID: 0}
     - target: {fileID: -36896156430011208, guid: 3e2a4ea699ebf0245b225993cbcf0a68, type: 3}
       propertyPath: m_Name
@@ -1323,6 +1335,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3e2a4ea699ebf0245b225993cbcf0a68, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1330,18 +1346,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3e2a4ea699ebf0245b225993cbcf0a68, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1961585749}
-    - targetCorrespondingSourceObject: {fileID: -5588071056741394010, guid: 3e2a4ea699ebf0245b225993cbcf0a68, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3e2a4ea699ebf0245b225993cbcf0a68, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1961585750}
+      addedObject: {fileID: 1961585755}
   m_SourcePrefab: {fileID: 100100000, guid: 3e2a4ea699ebf0245b225993cbcf0a68, type: 3}
 --- !u!1 &1961585747 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3e2a4ea699ebf0245b225993cbcf0a68, type: 3}
-  m_PrefabInstance: {fileID: 1961585746}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1961585748 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -5588071056741394010, guid: 3e2a4ea699ebf0245b225993cbcf0a68, type: 3}
   m_PrefabInstance: {fileID: 1961585746}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1961585749
@@ -1357,16 +1368,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nap: {x: 2, y: 0, z: 0}
+  muve: {x: 0, y: 0, z: 0}
   perriod: 1
-  speed: 1
+  speed: 0.1
   answer: 0
---- !u!64 &1961585750
+--- !u!64 &1961585755
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1961585748}
+  m_GameObject: {fileID: 1961585747}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

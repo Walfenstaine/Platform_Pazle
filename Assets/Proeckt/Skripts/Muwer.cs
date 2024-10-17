@@ -15,6 +15,8 @@ public class Muwer : MonoBehaviour {
 	private Vector3 moveDirection = Vector3.zero;
 	float rotationY = 0F;
 	private CharacterController controller;
+	public Platform platform;
+	public Vector3 mawe;
 	public bool grunded;
     public static Muwer rid { get; set; }
     void Awake()
@@ -38,20 +40,28 @@ public class Muwer : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-		if (other.tag == "Grund") 
+		if (other.tag == "Grund"|| other.tag == "Platform") 
 		{
             grunded = true;
-			transform.parent = other.transform;
+			if (other.GetComponent<Platform>()) 
+			{
+				platform = other.GetComponent<Platform>();
+
+            }
         }
 		
     }
     private void OnTriggerExit(Collider other)
     {
-		if (other.tag == "Grund")
+		if (other.tag == "Grund" || other.tag == "Platform")
 		{
 			grunded = false;
             anim.SetTrigger("Jump");
-			transform.parent = null;
+            if (other.GetComponent<Platform>())
+            {
+                platform = null;
+
+            }
         }
     }
 	public void Jump() 
@@ -70,19 +80,29 @@ public class Muwer : MonoBehaviour {
 		}
 
 		if (grunded) {
+			if (platform)
+			{
+				mawe = platform.muve;
+			}
+			else 
+			{
+				mawe = Vector3.zero;
+
+            }
 			moveDirection = muve;
 			moveDirection = transform.TransformDirection (moveDirection);
 			moveDirection *= speed;
 
 		} else {
 			moveDirection.y -= gravity * Time.deltaTime;
-			if (controller.velocity.y <= 0) 
+            mawe = Vector3.zero;
+            if (controller.velocity.y <= 0) 
 			{
                 muve.y = 0;
             }
 		}
 
-		controller.Move(moveDirection * Time.deltaTime);
+		controller.Move(moveDirection + mawe * Time.deltaTime);
 	}
     private void FixedUpdate()
     {
