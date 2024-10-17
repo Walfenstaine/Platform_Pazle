@@ -843,7 +843,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e2a4ea699ebf0245b225993cbcf0a68, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.34
+      value: -27.122
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e2a4ea699ebf0245b225993cbcf0a68, type: 3}
       propertyPath: m_LocalPosition.y
@@ -914,6 +914,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3e2a4ea699ebf0245b225993cbcf0a68, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1661174040}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3e2a4ea699ebf0245b225993cbcf0a68, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1661174043}
   m_SourcePrefab: {fileID: 100100000, guid: 3e2a4ea699ebf0245b225993cbcf0a68, type: 3}
 --- !u!1 &1131500787
 GameObject:
@@ -1324,6 +1327,27 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1849448791560148974, guid: 3e2a4ea699ebf0245b225993cbcf0a68, type: 3}
+--- !u!65 &1661174043
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661174039}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.7607632, y: 0.7065839, z: 2.8077478}
+  m_Center: {x: 0.0008134842, y: -0.14670804, z: 0.031424046}
 --- !u!1 &1801417338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1654,7 +1678,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1389641040093010358, guid: a75cac231b400b846b0d9aa0f99154ec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.19
+      value: -27.039
       objectReference: {fileID: 0}
     - target: {fileID: 1389641040093010358, guid: a75cac231b400b846b0d9aa0f99154ec, type: 3}
       propertyPath: m_LocalPosition.y

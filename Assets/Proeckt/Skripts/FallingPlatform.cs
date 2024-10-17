@@ -5,8 +5,8 @@ using UnityEngine;
 public class FallingPlatform : MonoBehaviour
 {
     public Rigidbody rb;
-    private Vector3 muve;
-    private float timer;
+    public Vector3 muve;
+    public float timer;
     public float interval;
 
     void Start()
