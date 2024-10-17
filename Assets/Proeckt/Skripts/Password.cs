@@ -10,7 +10,7 @@ public class Password : MonoBehaviour
     public string str;
     public Text txt;
     public AudioClip clip , sound , radio;
-    public UnityEvent[] sumer;
+    public UnityEvent sumer;
 
     void Start()
 
