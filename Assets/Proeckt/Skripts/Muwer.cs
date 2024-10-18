@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class Muwer : MonoBehaviour {
+    public Rigidbody rb;
 	public Vector3 muve;
 	public Vector2 rut;
 	public float sensitivity = 1.1f;
@@ -10,13 +11,8 @@ public class Muwer : MonoBehaviour {
 	public float maximumY = 60F;
 	public float speed = 6.0F;
 	public float jumpforse = 10;
-	public float gravity = 20.0F;
 	public Animator anim;
-	private Vector3 moveDirection = Vector3.zero;
 	float rotationY = 0F;
-	private CharacterController controller;
-	public Platform platform;
-	public Vector3 mawe;
 	public bool grunded;
     public static Muwer rid { get; set; }
     void Awake()
@@ -34,20 +30,15 @@ public class Muwer : MonoBehaviour {
     {
         rid = null;
     }
-    void Start () {
-		controller = GetComponent<CharacterController>();
-	}
+
 
     private void OnTriggerEnter(Collider other)
     {
 		if (other.tag == "Grund"|| other.tag == "Platform") 
 		{
+            transform.parent = other.transform;
             grunded = true;
-			if (other.GetComponent<Platform>()) 
-			{
-				platform = other.GetComponent<Platform>();
-
-            }
+            muve.y = 0;
         }
 		
     }
@@ -57,11 +48,7 @@ public class Muwer : MonoBehaviour {
 		{
 			grunded = false;
             anim.SetTrigger("Jump");
-            if (other.GetComponent<Platform>())
-            {
-                platform = null;
-
-            }
+            transform.parent = null;
         }
     }
 	public void Jump() 
@@ -78,36 +65,17 @@ public class Muwer : MonoBehaviour {
 			cam.transform.localEulerAngles = new Vector3(-rotationY, 0, 0);
 			transform.localEulerAngles = new Vector3(0, rotationX, 0);
 		}
-
-		if (grunded) {
-			if (platform)
-			{
-				mawe = platform.muve;
-			}
-			else 
-			{
-				mawe = Vector3.zero;
-
-            }
-			moveDirection = muve;
-			moveDirection = transform.TransformDirection (moveDirection);
-			moveDirection *= speed;
-
-		} else {
-			moveDirection.y -= gravity * Time.deltaTime;
-            mawe = Vector3.zero;
-            if (controller.velocity.y <= 0) 
-			{
-                muve.y = 0;
-            }
-		}
-
-		controller.Move(moveDirection + mawe * Time.deltaTime);
+        if (!grunded) 
+        {
+            muve.y -= 9.8f * Time.deltaTime;
+        }
 	}
     private void FixedUpdate()
     {
-		anim.SetFloat("Speed", controller.velocity.magnitude/speed);
-		if (muve.magnitude > 0)
+        Vector3 nap = transform.TransformDirection(muve);
+		anim.SetFloat("Speed", rb.velocity.magnitude/speed*5);
+        rb.AddForce(nap * speed);
+        if (muve.magnitude > 0)
 		{
 			anim.SetBool("Walck", true);
 		}
