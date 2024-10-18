@@ -19,7 +19,7 @@ public class FallingPlatform : MonoBehaviour
     void Update()
 
     {
-        if(rb.isKinematic == false)
+        if(!rb.isKinematic)
         {
             timer += Time.deltaTime;
         }
