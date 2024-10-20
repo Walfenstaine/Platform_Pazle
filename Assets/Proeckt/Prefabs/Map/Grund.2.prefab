@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7662431936644075618}
   - component: {fileID: 3867143199437951258}
   - component: {fileID: 3048912839279891502}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: G.2
   m_TagString: Grund
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 7939908291781803405}
   - component: {fileID: 78286851597925802}
   - component: {fileID: 8708932447311575258}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grund.2
   m_TagString: Grund
   m_Icon: {fileID: 0}

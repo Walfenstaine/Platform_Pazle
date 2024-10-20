@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8353187815586762589}
   - component: {fileID: 248438143892080983}
   - component: {fileID: 7188975597524313461}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bochka
   m_TagString: Grund
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1235578174534688973}
   - component: {fileID: 629361540133731753}
   - component: {fileID: 5066944260407749946}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: tor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 3236382196366592653}
   - component: {fileID: 8544848062288445842}
   - component: {fileID: 2840217975706606961}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wood
   m_TagString: Grund
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7678575761634453307}
   - component: {fileID: 2857446367806586795}
   - component: {fileID: 1257569649112475972}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Kolodec
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 8379584364982043742}
   - component: {fileID: 3941254498115818617}
   - component: {fileID: 4569528767458101107}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Lok
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 8987453075501772142}
   - component: {fileID: 2258605947409511239}
   - component: {fileID: 5521899222311306225}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Metal
   m_TagString: Untagged
   m_Icon: {fileID: 0}

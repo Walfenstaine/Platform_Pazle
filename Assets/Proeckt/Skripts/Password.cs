@@ -11,11 +11,25 @@ public class Password : MonoBehaviour
     public Text txt;
     public AudioClip clip , sound , radio;
     public UnityEvent sumer;
-
-    void Start()
-
+    public static Password rid { get; set; }
+    void Awake()
     {
-        name = "7054";
+        if (rid == null)
+        {
+            rid = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
+    void OnDestroy()
+    {
+        rid = null;
+    }
+    public void Remain(int passvord) 
+    {
+        name = "" + passvord;
     }
 
     void Update()

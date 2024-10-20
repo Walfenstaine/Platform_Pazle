@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6051486226879947673}
   - component: {fileID: 6523858754820043494}
   - component: {fileID: 8627482426516588811}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Synduk
   m_TagString: Grund
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 2151855007919828555}
   - component: {fileID: 5452486326156159132}
   - component: {fileID: 3455940678110876351}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Krishka
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 4704057571522779203}
   - component: {fileID: 2897563802859800535}
   - component: {fileID: 4606822755123328861}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

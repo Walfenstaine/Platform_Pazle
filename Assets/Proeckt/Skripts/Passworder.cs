@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class Passworder : MonoBehaviour
 {
     public float maine = 30;
-    public UnityEvent click;
+    public UnityEvent click, off;
     public bool ontgregger;
 
     private void FixedUpdate()
@@ -34,6 +34,7 @@ public class Passworder : MonoBehaviour
         if (other.tag == "Player")
         {
             ontgregger = false;
+            off.Invoke();
         }
     }
 }
