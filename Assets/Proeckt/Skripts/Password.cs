@@ -55,6 +55,7 @@ public class Password : MonoBehaviour
     {
         if(str == name)
         {
+            sumer.Invoke();
             SoundPlayer.regit.Play(clip , 1);
         }
         else
