@@ -12,6 +12,12 @@ public class Navigation : MonoBehaviour
     public Animator anim;
     public int num;
 
+    public enum direction
+
+    {
+        patrol , attack
+    }
+
     void Start()
 
     {
