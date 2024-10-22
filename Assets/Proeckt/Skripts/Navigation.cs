@@ -11,12 +11,10 @@ public class Navigation : MonoBehaviour
     public float attackDistance;
     public Animator anim;
     public int num;
+    public float timer;
 
-    public enum direction
+    
 
-    {
-        patrol , attack
-    }
 
     void Start()
 
@@ -27,19 +25,36 @@ public class Navigation : MonoBehaviour
     void Update()
 
     {
-        agent.destination = target[num].position;
-        agent.speed = speed;
-        if(agent.remainingDistance <= attackDistance)
+        if(transform == null)
         {
-            if(num < target.Length - 1)
+            if(timer > 0)
             {
-                num += 1;
+                timer -= Time.deltaTime;
+                agent.speed = 0;
+                anim.SetBool("Run" , false);
             }
-            else
+            anim.SetBool("Run" , true);
+            anim.SetFloat("Speed" , agent.velocity.magnitude);
+            agent.destination = target[num].position;
+            agent.speed = speed;
+            if(agent.remainingDistance <= attackDistance)
             {
-                num = 0;
+                if(num < target.Length - 1)
+                {
+                    num += 1;
+                }
+                else
+                {
+                    num = 0;
+                }
+                timer = Random.Range(3 , 7);
             }
         }
+        else
+        {
+
+        }
+        
     }
 
 }
