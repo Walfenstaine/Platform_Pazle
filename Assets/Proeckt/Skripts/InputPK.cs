@@ -32,6 +32,10 @@ public class InputPK : MonoBehaviour
             {
                 Muwer.rid.Jump();
             }
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                TNT.rid.Kik();
+            }
             Muwer.rid.muve.z = Input.GetAxis("Vertical");
             Muwer.rid.muve.x = Input.GetAxis("Horizontal");
             Muwer.rid.rut = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
