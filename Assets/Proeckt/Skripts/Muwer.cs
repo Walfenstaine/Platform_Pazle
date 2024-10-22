@@ -31,26 +31,6 @@ public class Muwer : MonoBehaviour {
         rid = null;
     }
 
-
-    private void OnTriggerEnter(Collider other)
-    {
-		if (other.tag == "Grund"|| other.tag == "Platform") 
-		{
-            transform.parent = other.transform;
-            grunded = true;
-            muve.y = 0;
-        }
-		
-    }
-    private void OnTriggerExit(Collider other)
-    {
-		if (other.tag == "Grund" || other.tag == "Platform")
-		{
-			grunded = false;
-            anim.SetTrigger("Jump");
-            transform.parent = null;
-        }
-    }
 	public void Jump() 
 	{
         muve.y = jumpforse;
@@ -72,7 +52,7 @@ public class Muwer : MonoBehaviour {
 	}
     private void FixedUpdate()
     {
-        Collider[] hit = Physics.OverlapSphere(transform.position - transform.up, 0.8f, mask);
+        Collider[] hit = Physics.OverlapSphere(transform.position - transform.up, 0.45f, mask);
         if (hit.Length > 0)
         {
             if (!grunded) 
@@ -87,6 +67,7 @@ public class Muwer : MonoBehaviour {
             grunded = false;
         }
         Vector3 nap = transform.TransformDirection(muve);
+        anim.SetBool("Jump", !grunded);
 		anim.SetFloat("Speed", rb.velocity.magnitude/speed*5);
         rb.AddForce(nap * speed);
         if (muve.magnitude > 0)
