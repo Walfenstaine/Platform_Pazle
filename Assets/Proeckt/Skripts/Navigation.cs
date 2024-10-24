@@ -6,55 +6,43 @@ using UnityEngine.AI;
 public class Navigation : MonoBehaviour
 {
     public NavMeshAgent agent;
-    public Transform[] target;
-    public float speed;
-    public float attackDistance;
+    public Transform target;
+    public float speed, interval;
     public Animator anim;
-    public int num;
     public float timer;
+    public Vector3 onmuwe;
 
-    
-
-
-    void Start()
-
+    public void Onpointer(Vector3 point) 
     {
-        
+        onmuwe = point;
+        timer = interval;
     }
-
-    void Update()
-
+    public void Ontarget()
     {
-        if(transform == null)
+        target = Muwer.rid.transform;
+    }
+    private void FixedUpdate()
+    {
+        anim.SetBool("Run", !agent.isStopped);
+        anim.SetFloat("Speed", agent.velocity.magnitude/agent.height);
+        if (target == null)
         {
-            if(timer > 0)
-            {
-                timer -= Time.deltaTime;
-                agent.speed = 0;
-                anim.SetBool("Run" , false);
-            }
-            anim.SetBool("Run" , true);
-            anim.SetFloat("Speed" , agent.velocity.magnitude);
-            agent.destination = target[num].position;
             agent.speed = speed;
-            if(agent.remainingDistance <= attackDistance)
+            agent.destination = onmuwe;
+            if (timer > 0)
             {
-                if(num < target.Length - 1)
-                {
-                    num += 1;
-                }
-                else
-                {
-                    num = 0;
-                }
-                timer = Random.Range(3 , 7);
+                agent.isStopped = true;
+                timer -= Time.deltaTime;
+            }
+            else
+            {
+                agent.isStopped = false;
             }
         }
-        else
+        else 
         {
-
+            agent.speed = speed * 2;
+            agent.destination = target.position;
         }
-        
     }
-
 }
