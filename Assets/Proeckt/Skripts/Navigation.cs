@@ -23,8 +23,8 @@ public class Navigation : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        anim.SetBool("Run", !agent.isStopped);
-        anim.SetFloat("Speed", agent.velocity.magnitude/agent.height);
+        anim.SetBool("Run" , !agent.isStopped);
+        anim.SetFloat("Speed" , agent.velocity.magnitude/agent.height);
         if (target == null)
         {
             agent.speed = speed;
