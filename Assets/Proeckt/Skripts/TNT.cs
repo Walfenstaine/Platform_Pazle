@@ -34,7 +34,7 @@ public class TNT : MonoBehaviour
     {
         Rigidbody rb = Instantiate(drop).GetComponent<Rigidbody>();
         rb.transform.position = transform.position;
-        rb.AddForce(Camera.main.transform.forward * 420);
+        rb.AddForce(Camera.main.transform.forward * 1420);
         rb.AddTorque(transform.right * 20);
 
        render.enabled = false;

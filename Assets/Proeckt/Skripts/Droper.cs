@@ -9,8 +9,17 @@ public class Droper : MonoBehaviour
     private bool active = true;
     private void OnCollisionEnter(Collision collision)
     {
-        
-        if (collision.gameObject.tag != "Player"&& collision.gameObject.tag != "TNT") 
+        if (collision.gameObject.tag == "Enemy")
+        {
+            collision.gameObject.GetComponent<Navigation>().Nokout();
+            if (active)
+            {
+                active = false;
+                Destroy(gameObject);
+                Instantiate(tnt, transform.position, transform.rotation);
+            }
+        }
+        if (collision.gameObject.tag != "Player" && collision.gameObject.tag != "TNT")
         {
             if (active)
             {
@@ -18,8 +27,6 @@ public class Droper : MonoBehaviour
                 Destroy(gameObject);
                 Instantiate(tnt, transform.position, transform.rotation);
             }
-            
-            
         }
     }
 }

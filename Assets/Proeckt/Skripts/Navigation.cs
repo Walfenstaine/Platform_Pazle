@@ -17,9 +17,18 @@ public class Navigation : MonoBehaviour
         onmuwe = point;
         timer = interval;
     }
+    public void Nokout()
+    {
+        timer = interval*3;
+        anim.SetBool("NokOyt", true);
+    }
     public void Ontarget()
     {
         target = Muwer.rid.transform;
+    }
+    public void OffTarget()
+    {
+        target = null;
     }
     private void FixedUpdate()
     {
@@ -29,6 +38,7 @@ public class Navigation : MonoBehaviour
         {
             agent.speed = speed;
             agent.destination = onmuwe;
+            
             if (timer > 0)
             {
                 agent.isStopped = true;
@@ -37,6 +47,7 @@ public class Navigation : MonoBehaviour
             else
             {
                 agent.isStopped = false;
+                anim.SetBool("NokOyt", false);
             }
         }
         else 

@@ -11,7 +11,6 @@ public class FOVArea : MonoBehaviour
     public UnityEvent target;
 
     private float radiansAngleBound;
-
     private MeshFilter meshFilter;
 
     void Start()
@@ -48,10 +47,6 @@ public class FOVArea : MonoBehaviour
         return pointsTemp;
     }
 
-    public void Catch()
-    {
-        target.Invoke();
-    }
 
     Vector3 DoneRayCast(float angleTemp)
     {
@@ -61,7 +56,11 @@ public class FOVArea : MonoBehaviour
         {
             if (hit.collider.tag == "Player")
             {
-                Catch();
+                target.Invoke();
+                if (hit.distance <= 0.5f)
+                {
+                    Interface.rid.Sum(3, false, 0);
+                }
             }
             return rayDirection * hit.distance;
         }
