@@ -19,8 +19,13 @@ public class Navigation : MonoBehaviour
     }
     public void Nokout()
     {
-        timer = interval*3;
-        anim.SetBool("NokOyt", true);
+        
+        if(target == null)
+        {
+            anim.SetBool("NokOyt", true);
+            timer = interval * 3;
+        }
+        
     }
     public void Ontarget()
     {
