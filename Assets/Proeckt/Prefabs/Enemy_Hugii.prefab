@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2201974383684403521}
   - component: {fileID: 4778417265010196450}
   m_Layer: 0
-  m_Name: Enemy_SH
+  m_Name: Enemy_Hugii
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
