@@ -12,6 +12,14 @@ public class Navigation : MonoBehaviour
     public float timer;
     public Vector3 onmuwe;
 
+    private void OnEnable()
+    {
+        Droper.onFool += OnFool;
+    }
+    private void OnDisable()
+    {
+        Droper.onFool -= OnFool;
+    }
     public void Onpointer(Vector3 point) 
     {
         onmuwe = point;
@@ -26,6 +34,14 @@ public class Navigation : MonoBehaviour
             timer = interval * 3;
         }
         
+    }
+    void OnFool(Transform targeting) 
+    {
+        target = targeting;
+    }
+    public void OffFool()
+    {
+        target = null;
     }
     public void Ontarget()
     {

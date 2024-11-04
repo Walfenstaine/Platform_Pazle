@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 public class Droper : MonoBehaviour
 {
+    public static event Action<Transform> onFool;
     public GameObject tnt;
     public Rigidbody rb;
     private bool active = true;
@@ -24,8 +25,12 @@ public class Droper : MonoBehaviour
             if (active)
             {
                 active = false;
+                GameObject target = Instantiate(tnt);
+                target.transform.position = transform.position;
+                target.transform.rotation = transform.rotation;
+                onFool.Invoke(target.transform);
                 Destroy(gameObject);
-                Instantiate(tnt, transform.position, transform.rotation);
+
             }
         }
     }

@@ -7,11 +7,18 @@ public class Loot : MonoBehaviour
     public AudioClip clip;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player") 
+        if (other.tag == "Player")
         {
             TNT.rid.Take();
-            SoundPlayer.regit.Play(clip,1);
+            SoundPlayer.regit.Play(clip, 1);
             Destroy(gameObject);
+        }
+        else 
+        {
+            if (other.tag == "Enemy") 
+            {
+                other.GetComponent<Navigation>().OffFool();
+            }
         }
     }
 }
