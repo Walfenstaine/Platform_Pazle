@@ -57,7 +57,7 @@ public class FOVArea : MonoBehaviour
             if (hit.collider.tag == "Player")
             {
                 target.Invoke();
-                if (hit.distance <= 0.5f)
+                if (hit.distance <= 1.5f)
                 {
                     Interface.rid.Sum(3, false, 0);
                 }
