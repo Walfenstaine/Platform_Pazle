@@ -10075,7 +10075,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5411904928835294183, guid: a75cac231b400b846b0d9aa0f99154ec, type: 3}
       propertyPath: jumpforse
-      value: 2.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5411904928835294183, guid: a75cac231b400b846b0d9aa0f99154ec, type: 3}
       propertyPath: mask.m_Bits
