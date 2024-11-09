@@ -33,7 +33,10 @@ public class Muwer : MonoBehaviour {
 
 	public void Jump() 
 	{
-        muve.y = jumpforse;
+        if (grunded) 
+        {
+            muve.y = jumpforse;
+        }
 	}
 
     void Update() {

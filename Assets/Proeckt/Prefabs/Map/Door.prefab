@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4741526046265785765
 Transform:
@@ -125,7 +125,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &614156820512248218
 Transform:
@@ -212,8 +212,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 6.9285116, y: 8.4536495, z: 15}
-  m_Center: {x: 0, y: 4.2268248, z: -0.02155304}
+  m_Size: {x: 4.1740746, y: 8.4536495, z: 11.589746}
+  m_Center: {x: -1.3772185, y: 4.2268248, z: -2.6885476}
 --- !u!95 &6085414089898020197
 Animator:
   serializedVersion: 5
@@ -247,7 +247,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bee51cf5ec5a826459443d4a1e3664a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  closed: 0
+  language: {fileID: 11400000, guid: 7e4e2f2b1d791834cb884ba8bea3ca96, type: 2}
+  password: 2024
+  closed: 1
   anim: {fileID: 6085414089898020197}
 --- !u!1 &8797484175089974186
 GameObject:
