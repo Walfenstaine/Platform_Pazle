@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class ButtonRemainer : MonoBehaviour
 {
+    public Dor dor;
     public int sum, password;
     public bool cursor;
     public float scale;
 
+    private void Awake()
+    {
+        if (dor != null) 
+        {
+            password = dor.password;
+        }
+       
+    }
     public void OnClick()
     {
         Password.rid.Remain(password);

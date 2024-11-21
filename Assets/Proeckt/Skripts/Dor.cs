@@ -10,7 +10,15 @@ public class Dor : MonoBehaviour
     public bool closed;
     public Animator anim;
 
-    public void Opened(int number) 
+    private void OnEnable()
+    {
+        Password.onOpoen += Opened;
+    }
+    private void OnDisable()
+    {
+        Password.onOpoen -= Opened;
+    }
+    void Opened(int number) 
     {
         if (number == password) 
         {

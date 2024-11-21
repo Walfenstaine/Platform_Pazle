@@ -55,7 +55,7 @@ public class Muwer : MonoBehaviour {
 	}
     private void FixedUpdate()
     {
-        Collider[] hit = Physics.OverlapSphere(transform.position - transform.up, 0.45f, mask);
+        Collider[] hit = Physics.OverlapSphere(transform.position - transform.up, 0.35f, mask);
         if (hit.Length > 0)
         {
             if (!grunded) 

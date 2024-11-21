@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEditor.Callbacks;
+using System;
 
 public class Password : MonoBehaviour
 {
@@ -10,7 +12,7 @@ public class Password : MonoBehaviour
     public string str;
     public Text txt;
     public AudioClip clip , sound , radio;
-    public UnityEvent sumer;
+    public static event Action<int> onOpoen;
     public static Password rid { get; set; }
     void Awake()
     {
@@ -69,7 +71,7 @@ public class Password : MonoBehaviour
     {
         if(str == name)
         {
-            sumer.Invoke();
+            onOpoen.Invoke(int.Parse(str));
             SoundPlayer.regit.Play(clip , 1);
         }
         else
