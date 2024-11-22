@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class Muwer : MonoBehaviour {
+    public Data position;
     public LayerMask mask;
     public Rigidbody rb;
 	public Vector3 muve;
@@ -17,6 +18,11 @@ public class Muwer : MonoBehaviour {
     public static Muwer rid { get; set; }
     void Awake()
     {
+        if (position.starter) 
+        {
+            transform.position = position.position[position.index];
+            transform.rotation = position.rotation[position.index];
+        }
         if (rid == null)
         {
             rid = this;

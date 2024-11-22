@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using YG;
 
 public class TreeggerSensor : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public UnityEvent click;
+
+    private bool ontarget;
+    private void FixedUpdate()
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.tag == "Player")
+        {
+            click.Invoke();
+        }
     }
 }

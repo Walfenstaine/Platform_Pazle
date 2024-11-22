@@ -11,6 +11,7 @@ public class Interface : MonoBehaviour
     public static Interface rid { get; set; }
     void Awake()
     {
+        Sum(0, true, 0);
         if (rid == null)
         {
             rid = this;
@@ -25,10 +26,6 @@ public class Interface : MonoBehaviour
         rid = null;
     }
 
-    void Start()
-    {
-        sumer[0].Invoke();
-    }
     public void Sum(int index, bool cursor, float scale)
     {
         sumer[index].Invoke();
