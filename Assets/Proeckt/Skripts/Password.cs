@@ -29,10 +29,7 @@ public class Password : MonoBehaviour
     {
         rid = null;
     }
-    public void Remain(int passvord) 
-    {
-        name = "" + passvord;
-    }
+
 
     void Update()
 
