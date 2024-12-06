@@ -3212,6 +3212,10 @@ PrefabInstance:
       value: Door_ExitLVL (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6000500306711919667, guid: b67011de7f738434aa4a8dd44a229ced, type: 3}
+      propertyPath: scene
+      value: Scene 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6000500306711919667, guid: b67011de7f738434aa4a8dd44a229ced, type: 3}
       propertyPath: rezgim
       value: 1
       objectReference: {fileID: 0}
