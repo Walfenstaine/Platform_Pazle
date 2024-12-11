@@ -9949,7 +9949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6000500306711919667, guid: b67011de7f738434aa4a8dd44a229ced, type: 3}
       propertyPath: nextIndex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6000500306711919667, guid: b67011de7f738434aa4a8dd44a229ced, type: 3}
       propertyPath: player_Pos

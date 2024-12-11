@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 1
   position:
+  - {x: -3.210003, y: 4.8976426, z: 76.37457}
   - {x: -9.316, y: 4.8976426, z: 76.37}
-  - {x: -49.48808, y: 4.98, z: 104.63}
   rotation:
+  - {x: -0, y: -0.706568, z: -0, w: -0.7076453}
   - {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  - {x: 0, y: 1, z: 0, w: 0}
-  starter: 1
+  starter: 0
