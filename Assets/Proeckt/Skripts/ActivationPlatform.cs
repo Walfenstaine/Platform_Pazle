@@ -6,13 +6,16 @@ public class ActivationPlatform : MonoBehaviour
 
 {
 
-    public Platform platform;
+    public Platform plat;
+    public Transform platform;
+    public Transform camera;
 
     public void OnTarget()
 
     {
-        platform.enabled = true;
-        Quaternion.Lerp()
+        plat.enabled = true;
+        Vector3 look = platform.position - camera.position;
+        Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(look) , 3 * Time.deltaTime);
     }
 
 }
