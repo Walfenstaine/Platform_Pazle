@@ -15,7 +15,7 @@ public class ActivationPlatform : MonoBehaviour
     {
         plat.enabled = true;
         Vector3 look = platform.position - camera.position;
-        Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(look) , 3 * Time.deltaTime);
+        camera.rotation = Quaternion.Lerp(camera.rotation , Quaternion.LookRotation(look) , 3 * Time.deltaTime);
     }
 
 }
